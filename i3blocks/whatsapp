@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo " "
+
+
+case $BLOCK_BUTTON in
+	1) $(firefox -new-tab web.whatsapp.com);;
+	*) ;;
+esac
