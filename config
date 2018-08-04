@@ -292,3 +292,10 @@ bindsym XF86AudioPrev exec playerctl previous
 # Keybinding controls
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
+# Screenshot controls
+bindsym Print exec gnome-screenshot -i
+bindsym $ctrl+Print exec gnome-screenshot
+bindsym Shift+Print exec gnome-screenshot -a
+
+###################
