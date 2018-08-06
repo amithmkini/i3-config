@@ -45,9 +45,3 @@ elif [[ $QUALITY -lt 60 ]]; then
 elif [[ $QUALITY -lt 40 ]]; then
     echo "#FF0000"
 fi
-
-case $BLOCK_BUTTON in
-	1) $(wicd-client -n);;
-	*) ;;
-esac
-
