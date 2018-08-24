@@ -180,8 +180,9 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 ###################################################################
 
 # Add tap to touch
-exec xinput set-prop 12 308 1
-exec xinput set-prop 13 312 1
+
+# Get the id of touchpad
+exec --no-startup-id xinput set-prop $(xinput | grep -oP "ELAN1010:00 04F3:3012 Touchpad\s+id=\K([0-9]+)") 308 1
 
 # Wallpaper
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
@@ -194,6 +195,9 @@ for_window [class="Gnome-calculator" instance="gnome-calculator"] floating enabl
 
 # Network Manager applet
 exec --no-startup-id nm-applet
+
+# Remove the ugly border
+new_window 1pixel
 
 ###################################################################
 # Custom bindings
