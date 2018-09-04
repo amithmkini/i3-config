@@ -182,10 +182,10 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 # Add tap to touch
 
 # Get the id of touchpad
-exec --no-startup-id xinput set-prop $(xinput | grep -oP "ELAN1010:00 04F3:3012 Touchpad\s+id=\K([0-9]+)") 308 1
+exec --no-startup-id xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Tapping Enabled' 1
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 # Lock screen after 15 minutes of inactivity
 exec xautolock -time 15 -locker '~/.config/i3/scripts/fuzzy_lock' &
